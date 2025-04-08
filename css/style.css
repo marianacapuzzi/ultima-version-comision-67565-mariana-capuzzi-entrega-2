@@ -1,0 +1,629 @@
+/* estilos generales para primer entrega*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'Belfast';
+    src: url("fonts/belfast-regular_6510.ttf") format("truetype");
+    font-weight: normal; /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Belfast';
+    src: url("fonts/belfast-medium_6516.ttf") format("truetype");
+    font-weight: 500; /* Medium, pero no funciona */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Belfast';
+    src: url("fonts/belfast-bold_6509.ttf") format("truetype");
+    font-weight: bold; /* Bold */
+    font-style: normal;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 columnas de igual tamaño */
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    width: 100vw;
+    min-height: 100vh; 
+    color: #431C19;
+    text-align: center;
+    background-color: gray;
+}
+
+main{
+    grid-column: span 12; /* Ocupa todas las columnas */
+    grid-row: 2; /* Segunda fila */
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    text-align: left;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+h3{
+    font-family: Arial;
+    font-size: 24px;
+    text-align: left;
+}
+
+h4{
+    font-family: Arial;
+    font-size: 22px;
+    text-align: center;
+}
+
+h5{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h6{
+    font-family: 'Belfast', serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+}
+
+
+
+/* estilos de header segunda entrega */
+/* estilos de header page1 */
+    /* estilos de header page1 menú superior*/
+header{ 
+    grid-column: span 12; /* Ocupa todas las columnas */
+    grid-row: 1; /* Primera fila */
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 5vw;
+} 
+
+.menu-superior{
+    display: flex;
+    background-color: #558B25;
+    height: 40px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu-superior ul{
+    display: flex;
+    gap: 8px;
+}
+
+.menu-superior ul li{
+    display: flex;
+    align-items: center;
+    background-color: tomato;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.menu-superior ul li a{
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+    /* estilos de header page1 navbar*/
+
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    background-color: aqua;
+    height: 150px;
+    gap: 20px;
+    padding: 0 5vw;
+}
+
+.navbar img:first-child {
+    grid-row: span 2;
+    background-color: tomato;
+    height: 85px;
+    width: auto;
+}
+
+.navbar img:nth-child(2) {
+    grid-row: span 2;
+    background-color: tomato;
+    height: 77px;
+    width: auto;
+}
+
+.navbar form{
+    grid-column: 3;
+    grid-row: 1;
+    background-color: tomato;
+}
+
+.navbar input{
+}
+
+.categorias {
+    grid-column: 3;
+    grid-row: 2;
+    text-align: center;
+}
+
+.categorias ul {
+    display: flex;
+    justify-content: center;
+    background-color: tomato;
+    gap: 30px;
+}
+
+.categorias ul li{
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    border: 1px solid #74B735;
+    height: 40px;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.categorias ul li a{
+    color: #558B25;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 15px;
+}
+
+    /* estilos de header page1 menú back*/
+
+.menu-back{
+    display: flex;
+    background-color: #FFF;
+    height: 40px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 80px;
+}
+
+.menu-back ul{
+    display: flex;
+    gap: 8px;
+}
+
+.menu-back ul li{
+    display: flex;
+    align-items: center;
+    color: #431C19;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.menu-back ul li a{
+    color: #ECCFBC;
+}
+
+.menu-back .separador{
+    color: #ECCFBC;
+}
+
+    /* estilos de header page1 banner*/
+.banner{
+    position: relative;
+}
+
+.banner img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.banner h1{
+    position: absolute;
+    bottom: 60px;
+    left: 5vw;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: #FFF;
+    font-size: 24px;
+}
+
+
+
+.header{
+}
+
+.header{
+}
+
+.header{
+}
+
+
+/*
+.menu-superior{
+    background-color: #558B25;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+.menu-superior a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.menu-categorias{
+    background-color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+.menu-categorias a{
+    text-decoration: none;
+    color: #558B25;
+}
+
+.carrusel h2{
+    text-align: left;  
+}
+
+.carrusel p{
+    text-align: left;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.menu-subcategorias-paso-a-paso{
+    background-color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.menu-subcategorias-paso-a-paso a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #eccfbc;
+}
+.separador{
+    color: #eccfbc;
+}
+
+.banner h1{
+    color: #F6E9DE;
+    font-family: Arial;
+    font-size: 24px;
+    text-align: left;
+}*/
+
+/* estilos de main */
+    /* estilos de index para primer entrega */
+
+.scaling-effect a{
+    /* hay algo que no está funcionando acá */
+    background-color: #F6E9DE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    color: #431C19;
+    text-align: left;
+    text-decoration: none;
+} 
+
+.sobre-nosotros h4{
+    background-color: #F6E9DE;
+    text-align: center;
+} 
+
+.sobre-nosotros p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #431C19;
+    text-align: left;
+} 
+
+.sobre-nosotros a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #431C19;
+    text-align: center;
+    text-decoration: none;
+} 
+
+.valores p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #431C19;
+    text-align: left;
+    background-color: #F6E9DE;
+} 
+
+.valores a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #431C19;
+    text-align: center;
+    text-decoration: none;
+} 
+
+.tags-sobre-nosotros h2{
+    color: #F6E9DE;
+} 
+
+.tags-sobre-nosotros p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #F6E9DE;
+    text-align: left;
+} 
+
+.tags-sobre-nosotros a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #431C19;
+    text-align: center;
+    text-decoration: none;
+} 
+
+/* estilos de page1 para segunda entrega */
+
+.contenedor-tag-receta-corta{
+    display: grid;
+    width: 1280px;
+    background-color: aquamarine;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+    row-gap: 60px;
+    align-content: center;
+}
+
+.tag-receta-corta{
+    display: grid;
+    grid-template-rows: 2, 1fr;
+    height: 320px;
+    width: 305px;
+    gap: 10px;
+}
+
+.tag-receta-corta-dulce{
+    display: flex;
+    height: 60px;
+    width: 305px;
+    background-color: #FFF;
+    align-items: center;
+    border: 1px solid #431C19;
+    border-radius: 12px;
+    gap: 0px;
+}
+
+.tag-receta-corta-dulce p{  /* OJO reemplazar en HTML y acá p x span??????*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 40px;
+    background-color: #431C19;
+    border-radius: 12px 0px 0px 12px;
+    font-family: 'Belfast', serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #FFF;
+}
+
+.tag-receta-corta-dulce h6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 265px;
+    border-radius: 12px;
+    color: #431C19;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.tag-receta-corta-salada{
+    display: flex;
+    height: 60px;
+    width: 305px;
+    background-color: #FFF;
+    align-items: center;
+    border: 1px solid #ECCFBC;
+    border-radius: 12px;
+    gap: 0px;
+}
+
+.tag-receta-corta-salada p{ /* OJO reemplazar en HTML y acá p x span??????*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 40px;
+    background-color: #ECCFBC;
+    border-radius: 12px 0px 0px 12px;
+    font-family: 'Belfast', serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #431C19;
+}
+
+.tag-receta-corta-salada h6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 265px;
+    border-radius: 12px;
+    color: #431C19;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.tag-receta-corta-imagen{
+    display: inline-block;
+    position: relative;
+    width: 305px;
+    height: 250px;
+    flex-direction: column;
+}
+
+.img-receta-corta{
+    width: 100%;
+    height: 100%;
+    clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,80 L 293,80 A 12,12 0,0,1 305,92 L 305,238 A 12,12 0,0,1 293,250 L 12,250 A 12,12 0,0,1 0,238 L 0,12 A 12,12 0,0,1 12,0 Z");
+}
+
+.tag-receta-corta-imagen div{
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    background-color: #F6E9DE;
+    gap: 4px;
+}
+
+
+    /* estilos de page2 y page3 para primer entrega */
+
+.caracteristicas-receta{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #431C19;
+    background-color: #F6E9DE;
+}
+    /* estilos de page4 para primer entrega */
+
+.titulo-receta{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.recetas-botones{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #431C19;
+    background-color: #eccfbc;
+}
+
+.recetas-botones a{
+    text-decoration: none;
+    color: #431C19;
+}   
+
+.recetas-caracteristicas{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #431C19;
+    background-color: #F6E9DE;
+}
+
+.recetas-productos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.recetas-desarrollo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.recetas-desarrollo h4{
+    background-color: #F6E9DE;
+}
+
+.lista-ordenada{
+    list-style-position: inside;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+.tips h4{
+    background-color: #FFF;
+}
+
+.tips p{
+    background-color: #F6E9DE;
+}
+
+.probaste{
+    text-align: left;
+}
+
+/* estilos de footer para primer entrega */
+
+footer{
+    grid-column: span 12;
+    grid-row: 3; /* Tercera fila */
+}
+
+.menu-categorias-footer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.menu-categorias-footer a{
+    text-decoration: none;
+    color: #431C19;
+}
+
+footer p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.pie{
+    text-align: center;
+}
